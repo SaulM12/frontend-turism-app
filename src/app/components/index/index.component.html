@@ -1,0 +1,75 @@
+<app-menu></app-menu>
+
+<div class="home">
+    <div class="main-container">
+
+    </div>
+    <div class="container p-4">
+        <div *ngIf="isLogged; else loggedOut">
+            <h3>BIENVENIDO {{nombreUsuario}} A TRAVEL S.A</h3>
+            <h5>Los mejores en viajes turísticos</h5><br>
+            <h6>Te esperamos!</h6>
+        </div>
+        <ng-template #loggedOut>
+            <h2>No has iniciado sesión</h2>
+        </ng-template>
+
+        <div class="row2">
+            <div class="row row-cols-1 row-cols-md-3">
+                <div class="col mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Destinos Turísticos</h5>
+                        </div>
+                        <img src="https://ec.viajandox.com/uploads/long_description_25.jpg" class="card-img-top"
+                            alt="..." style="height: 200px">
+
+                        <div class="card-footer">
+                            <a routerLink="/places">
+                                <td><button class="btn btn-outline-primary">Listado</button></td>
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Tours</h5>
+                        </div>
+                        <img src="https://ec.viajandox.com/uploads/long_description_25.jpg" class="card-img-top"
+                            alt="..." style="height: 200px">
+
+
+                        <div class="card-footer">
+                            <a routerLink="/tours">
+                                <td><button class="btn btn-outline-primary">Listado</button></td>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Promociones</h5>
+                        </div>
+                        <img src="https://ec.viajandox.com/uploads/long_description_25.jpg" class="card-img-top"
+                            alt="..." style="height: 200px">
+
+                        <div class="card-footer">
+                            <a routerLink="/places">
+                                <td><button class="btn btn-outline-primary">Listado</button></td>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

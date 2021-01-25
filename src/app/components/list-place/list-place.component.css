@@ -1,0 +1,44 @@
+.places {
+    min-height: calc(100vh - 193.88px);
+}
+
+.card {
+    border-color: black;
+    width: 540px;
+}
+
+.card-body {
+    margin-right: 10px;
+}
+
+.addbutton p {
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+}
+
+.addbutton .btn {
+    width: 100px;
+    margin-left: 15px;
+    border-radius: 15px;
+}
+
+.addbutton {
+    margin-bottom: 10px;
+}
+
+.boton3 .btn {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.btn-outline-info {
+    height: 49px;
+    border-radius: 15px;
+}
+
+.btn-dark {
+    border-radius: 15px;
+}

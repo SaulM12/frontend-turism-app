@@ -1,0 +1,36 @@
+<app-menu></app-menu>
+
+<div class="places">
+
+    <div class="container">
+
+     
+
+        <div class="row">
+            <div class="card mb-3 mt-3" style="max-width: 540px;" *ngFor="let tour of tours">
+                <div class="row row-cols-1 row-cols-md-3">
+                    <div class="col-md-4">
+                        <img src="{{tour.image}}" class="img-fluid" alt="Responsive image">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">{{tour.name}}</h5>
+                            <p class="card-text">Costo: <br>
+                                <small class="text-muted">{{tour.cost}}</small></p>
+                            <div class="boton3">
+                                <div class="row">    
+                                        <button type="button" class="btn btn-dark" routerLink="/tour/detail/{{tour.id}}">Más info</button>
+                                        <button type="button" class="btn btn-outline-info"  routerLink="/tour/edit/{{tour.id}}">Editar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

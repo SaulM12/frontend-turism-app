@@ -1,0 +1,36 @@
+<app-menu></app-menu>
+<div class="container-mt-3">
+    <div class="row mt-3">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <fieldset disabled="disabled">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="{{name}}" required >
+                </div>
+          
+                <div class="form-group">
+                    <label for="description">Correo</label>
+                    <input type="text" class="form-control" id="mail" name="mail" placeholder="{{mail}}"  required >
+                </div>
+                <div class="form-group">
+                    <label for="ubication">Nombre del tour</label>
+                    <input type="text" class="form-control" id="tourName" name="tourName" placeholder="{{tourName}}" required >
+                </div>
+                <div class="form-group">
+                    <label for="ubication">Costo por persona</label>
+                    <input type="text" class="form-control" id="tourName" name="tourName" placeholder="{{cost}}" required >
+                </div>
+            </fieldset>
+                <div class="form-group">
+                    <label for="image2"># Personas</label>
+                    <input type="number" class="form-control" id="persons" name="persons"[(ngModel)]="reserve.persons" required >
+                </div>
+        
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+                <button class="btn btn-outline-primary btn-block" routerLink="/places">Volver</button>
+            </form>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

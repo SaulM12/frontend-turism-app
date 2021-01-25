@@ -1,0 +1,135 @@
+.body {
+    background-image: url('https://images.pexels.com/photos/158385/lake-mcdonald-landscape-panorama-sunset-158385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    height: 340px/*(370px)*/
+    ;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.card-header h3 {
+    color: white;
+    text-align: center;
+}
+
+.input-group-prepend span {
+    width: 60px;
+    background-color: #FFC312;
+    color: black;
+    border: 0 !important;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.remember {
+    color: white;
+}
+
+.remember input {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.btn-log { 
+    color: #000000; 
+    background-color: #FFC312; 
+    border-color: #FFC312; 
+  } 
+   
+  .btn-log:hover, 
+  .btn-log:focus, 
+  .btn-log:active, 
+  .btn-log.active, 
+  .open .dropdown-toggle.btn-log { 
+    color: #000000; 
+    background-color: #FFFFFF; 
+    border-color: #FFC312; 
+  } 
+   
+  .btn-log:active, 
+  .btn-log.active, 
+  .open .dropdown-toggle.btn-log { 
+    background-image: none; 
+  } 
+   
+  .btn-log.disabled, 
+  .btn-log[disabled], 
+  fieldset[disabled] .btn-log, 
+  .btn-log.disabled:hover, 
+  .btn-log[disabled]:hover, 
+  fieldset[disabled] .btn-log:hover, 
+  .btn-log.disabled:focus, 
+  .btn-log[disabled]:focus, 
+  fieldset[disabled] .btn-log:focus, 
+  .btn-log.disabled:active, 
+  .btn-log[disabled]:active, 
+  fieldset[disabled] .btn-log:active, 
+  .btn-log.disabled.active, 
+  .btn-log[disabled].active, 
+  fieldset[disabled] .btn-log.active { 
+    background-color: #FFC312; 
+    border-color: #FFC312; 
+  } 
+   
+  .btn-log .badge { 
+    color: #FFC312; 
+    background-color: #000000; 
+  }
+
+.links {
+    color: white;
+}
+
+.links a {
+    margin-left: 5px;
+    color: rgb(197, 196, 196);
+}
+
+.register-form .form {
+    margin-left: 5px;
+}
+
+.register-form .input-group-prepend span {
+    width: 60px;
+    color: black;
+    border: 0 !important;
+}
+
+.modal-content {
+    width: 100%;
+    color: black;
+    border: 0 !important;
+}
+
+.modal-body .form-group {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.modal-dialog {
+    width: 400px;
+}
+
+.form-group label {
+    font-size: 15px;
+    font-weight: bold;
+}

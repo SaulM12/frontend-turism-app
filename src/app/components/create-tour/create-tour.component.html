@@ -1,0 +1,58 @@
+<app-menu></app-menu>
+<div class="container">
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                    <div>
+                        <h2 class="card-header">Datos Tour</h2>
+                    </div>
+                    <div>
+                        <label class="orangeForm-tittle">Destino turístico</label>
+                        <select id="place" class="form-control" name="place" required
+                          [(ngModel)]="tour.place.id">
+                          <option value="0" >Selecciona un lugar</option>
+                          <option *ngFor="let place of places" [value]="place.id">
+                            {{place.name}}</option>
+                        </select>
+                      </div>
+
+                    <label class="orangeForm-tittle">Nombre </label>
+                    <div class="input-group form-group">
+                        <input type="text"  id="name" name="name" [(ngModel)]="tour.name" class="form-control" placeholder="Ej. Mitad del Mundo" required>
+                    </div>
+
+                    <label class="orangeForm-tittle">Descripción</label>
+                    <div class="input-group form-group">
+                        <textarea id="description" name="description" class="form-control" [(ngModel)]="tour.description" placeholder="Descripción" required></textarea>
+                    </div>
+                    <label class="orangeForm-tittle"># Personas</label>
+                    <div class="input-group form-group">
+                        <input type="number" id="disponibility" name="disponibility" class="form-control" [(ngModel)]="tour.disponibility" placeholder="Ej. 2 Horas" required>
+                    </div>
+
+                    <label class="orangeForm-tittle">Costo</label>
+                    <div class="input-group form-group">
+                        <input type="text" id="cost" name="cost" class="form-control" [(ngModel)]="tour.cost"  placeholder="Ej. $50.50" required>
+                    </div>
+
+                    <label class="orangeForm-tittle">Duración</label>
+                    <div class="input-group form-group">
+                        <input type="text" id="duration" name="duration" class="form-control" [(ngModel)]="tour.duration" placeholder="Ej. 2 Horas" required>
+                    </div>
+
+                    <label class="orangeForm-tittle">Imagen (url)</label>
+                    <div class="input-group form-group">
+                        <input type="url" id="image" name="image" class="form-control" [(ngModel)]="tour.image" placeholder="Ej. https://foto.jpg" required>
+                    </div>
+
+                    <button class="btn btn-success btn-block" [disabled]="!f.valid">Guardar<i class="fa fa-angle-double-right pl-2"></i></button>
+                    <button class="btn btn-outline-primary btn-block" routerLink="/places">Volver</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>
