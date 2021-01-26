@@ -114,22 +114,13 @@ input:focus {
     border: 0 !important;
 }
 
-.modal-content {
-    width: 100%;
-    color: black;
-    border: 0 !important;
-}
 
-.modal-body .form-group {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.modal-dialog {
-    width: 400px;
-}
-
-.form-group label {
-    font-size: 15px;
+label {
+    font-size: 17px;
     font-weight: bold;
+    color: black;
 }
+.nav-link{
+   
+    font-weight: bold;
+ }

@@ -5,6 +5,12 @@
     min-height: calc(100vh - 193.88px);
 }
 
+.carusel {
+    padding-left: 150px;
+    padding-right: 150px;
+    background-color: #1A1A1A;
+}
+
 .carousel-item {
     width: 100%;
     height: 400px;
@@ -12,6 +18,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color: black;
 }
 
 @media (max-width: 600px) {
@@ -25,10 +32,34 @@
     margin-bottom: 10px;
 }
 
+.fondo {
+    background-color: #1A1A1A;
+}
+
+.card-body {
+    border-style: outset;
+    
+}
+.card-body p{
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.carousel-control-prev {
+    background-color: #424242;
+}
+.carousel-control-next {
+    background-color: #424242;
+}
 .description p {
     color: black;
     font-size: medium;
     font-family: 'Open Sans', sans-serif;
+}
+
+.btn_edit {
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .ubication p {
@@ -36,6 +67,7 @@
     color: #000;
     font-family: 'Open Sans', sans-serif;
     font-size: medium;
+    margin-top: 10px;
 }
 
 .tittle {
@@ -73,25 +105,7 @@ body {
     margin-right: 10px;
 }
 
-#social a .fa {
-    color: #FFF;
-}
 
-#social .facebook:hover {
-    background-color: #3b5998;
-}
-
-#social .twitter:hover {
-    background-color: #55acee;
-}
-
-#social .instagram:hover {
-    background-color: #dd4b39;
-}
-
-#social .Whatsapp:hover {
-    background-color: #00f050;
-}
 
 .boton {
     margin-top: 10px;

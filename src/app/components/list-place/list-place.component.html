@@ -1,7 +1,40 @@
 <app-menu></app-menu>
 <div class="places">
-
   <div class="container">
+
+    <div class="addbutton">
+      <div class="row">
+        <div *ngIf="isAdmin" class="col-md-6">
+          <p>Nuevos destinos turísticos<button type="button" class="btn btn-info" routerLink="/new">Añadir</button></p>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card" *ngFor="let place of places">
+            <img src="{{place.image1}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{place.name}}</h5>
+              <p class="card-text">Ubicación: <br>
+                <small class="text-muted">{{place.ubication}}</small>
+              </p>
+              <div class="boton3">
+                <div class="row">
+                  <button type="button" class="btn btn-dark" routerLink="/detail/{{place.id}}">Más info</button>
+                 
+                    <button *ngIf="isAdmin" type="button" class="btn btn-outline-info"
+                      routerLink="/edit/{{place.id}}">Editar</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--  <div class="container">
     <div *ngIf="isAdmin" class="addbutton">
       <div class="row">
         <div class="col-md-6">
@@ -12,8 +45,8 @@
     <div class="row">
       <div class="card mb-3 mt-3" *ngFor="let place of places">
         <div class="row">
-          <div class="col-md-4">
-            <img src="{{place.image1}}" class="img-fluid" alt="Responsive image">
+          <div class="card-body" style="width: 100%;">
+            <img src="{{place.image1}}">
           </div>
           <div class="col-md-6">
             <div class="card-body">
@@ -38,6 +71,7 @@
       </div>
 
     </div>
-  </div>
-</div>
-<app-footer></app-footer>
+  </div> -->
+
+
+  <app-footer></app-footer>

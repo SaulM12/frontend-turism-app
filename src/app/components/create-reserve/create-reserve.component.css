@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.card-header {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.orangeForm-tittle {
+    margin-top: 5px;
+}
+
+label {
+    font-size: medium;
+    font-weight: bold;
+}
+img{
+    height: 60px;
+    width: 60px;
+    margin-left: 10px;
+}
+
+.fa-user-check{
+    font-size: medium;
+    margin-left: 5px;
+}

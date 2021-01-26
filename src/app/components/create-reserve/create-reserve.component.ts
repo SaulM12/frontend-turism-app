@@ -77,7 +77,7 @@ export class CreateReserveComponent implements OnInit {
         this.toastr.success('Reserva guardada','OK',{
           timeOut: 3000, positionClass:'toast-top-center'
         });
-          this.router.navigate(['/tour/list']);
+          this.router.navigate(['/reserve/user/'+ this.nombreUsuario]);
       },err =>{
         this.toastr.error(err.error.message,'Fail',{
           timeOut: 3000, positionClass:'toast-top-center'

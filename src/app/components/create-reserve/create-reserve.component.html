@@ -1,5 +1,52 @@
 <app-menu></app-menu>
-<div class="container-mt-3">
+<div class="container">
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                    <div>
+                        <h2 class="card-header">Datos Reserva <img src="assets/logo.png" class="image-fluid" alt="Responsive image"></h2>
+                    </div>
+
+                    <fieldset disabled="disabled">
+                        <label class="orangeForm-tittle">Nombre </label>
+                        <div class="input-group form-group">
+                            <input type="text" id="name" name="name" placeholder="{{name}}" class="form-control"
+                                required>
+                        </div>
+
+                        <label class="orangeForm-tittle">Correo</label>
+                        <div class="input-group form-group">
+                            <input type="mail" id="mail" name="mail" class="form-control" placeholder="{{mail}}"
+                                required>
+                        </div>
+                        <label class="orangeForm-tittle">Nombre del Tour</label>
+                        <div class="input-group form-group">
+                            <input type="text" id="tourName" name="tourName" class="form-control"
+                                placeholder="{{tourName}}" required>
+                        </div>
+
+                        <label class="orangeForm-tittle">Costo por Persona</label>
+                        <div class="input-group form-group">
+                            <input type="text" id="cost" name="cost" class="form-control" placeholder="{{cost}}"
+                                required>
+                        </div>
+                    </fieldset>
+                    <label class="orangeForm-tittle"># Personas</label>
+                    <div class="input-group form-group">
+                        <input type="number" id="persons" name="persons" class="form-control"
+                            [(ngModel)]="reserve.persons" required>
+                    </div>
+
+
+                    <button class="btn btn-success btn-block" [disabled]="!f.valid">Reservar <i class="fas fa-user-check"></i></button>
+                    <button class="btn btn-primary btn-block" routerLink="/tour/list">Volver</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="container-mt-3">
     <div class="row mt-3">
         <div class="col-md-4 mx-auto">
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
@@ -32,5 +79,5 @@
             </form>
         </div>
     </div>
-</div>
+</div> -->
 <app-footer></app-footer>

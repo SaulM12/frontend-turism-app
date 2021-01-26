@@ -1,13 +1,47 @@
 <app-menu></app-menu>
 
 <div class="places">
+    <div class="container">
+  
+      <div class="addbutton">
+        <div class="row">
+          <div *ngIf="isAdmin" class="col-md-6">
+            <p>Nuevos Tours<button type="button" class="btn btn-info" routerLink="/tour/create">Añadir</button></p>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card" *ngFor="let tour of tours">
+              <img src="{{tour.image}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{tour.name}}</h5>
+                <p class="card-text">Costo: <br>
+                  <small class="text-muted">{{tour.cost}} $</small>
+                </p>
+                <div class="boton3">
+                  <div class="row">
+                    <button type="button" class="btn btn-dark" routerLink="/tour/detail/{{tour.id}}">Más info</button>
+                   
+                        <button type="button" class="btn btn-outline-info"  routerLink="/tour/edit/{{tour.id}}" *ngIf="isAdmin">Editar</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+</div>
+<!-- <div class="places">
 
     <div class="container">
 
         <div class="addbutton">
             <div class="row">
                 <div class="col-md-6" *ngIf="isAdmin">
-                    <p>Nuevos Tours <button type="button" class="btn btn-info" routerLink="/tours/create">Añadir</button></p>
+                    <p>Nuevos Tours <button type="button" class="btn btn-info" routerLink="/tour/create">Añadir</button></p>
                 </div>
             </div>
         </div>
@@ -37,6 +71,6 @@
             
         </div>
     </div>
-</div>
+</div> -->
 
 <app-footer></app-footer>

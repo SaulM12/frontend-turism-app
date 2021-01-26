@@ -1,7 +1,86 @@
 <app-menu></app-menu>
-<div class="container">
+
+<div class="fondo">
+    <div class="container">
+        <div class="card">
+            <div class="col-lg-12">
+                <div class="information">
+                    <div class="card-header tittle">
+                        <h3>
+                            {{place.name}}
+                        </h3>
+                    </div>
+
+                    <div class="carusel">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+
+                            <div class="inflex">
+                                <div class="carousel-inner">
+                                    <div class=" carousel-item active" style="background-image: url('{{place.image2}}')">
+                                        <div class="carousel-caption d-none d-md-block">
+                                        </div>
+                                    </div>
+
+                                    <div class=" carousel-item" style="background-image: url('{{place.image3}}')">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <div class="carousel-title">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class=" carousel-item" style="background-image: url('{{place.image1}}')">
+                                        <div class="carousel-caption d-none d-md-block">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="ubication">
+                        <p>
+                            <i class="fas fa-location-arrow"></i> Ubicación: {{place.ubication}}
+                        </p>
+                    </div>
+                    <div class="description">
+
+                        <h4>Descripción</h4>
+                        <div class="card-body">
+                            <p>
+                                {{place.description}}
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <button *ngIf="isAdmin" type="button" class="btn btn-info btn_edit float-right" routerLink="/edit/{{place.id}}">Editar info</button>
+                    <button *ngIf="isAdmin" type="button" class="btn btn-info btn_edit float-right" routerLink="/tour/place/{{place.id}}">Ver tours</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="container">
 
   <div class="card" *ngIf="place">
+      
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -51,5 +130,5 @@
           <button *ngIf="isAdmin" type="button" class="btn btn-outline-info btn_edit float-right" routerLink="/tour/place/{{place.id}}">Ver tours</button>
       </div>
   </div>
-</div>
+</div> -->
 <app-footer></app-footer>

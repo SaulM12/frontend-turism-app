@@ -1,5 +1,98 @@
 <app-menu></app-menu>
-<div class="container">
+
+<div class="fondo">
+    <div class="container">
+        <div class="col-lg-10">
+            <div class="card">
+                <div class="text">
+                    <div class="information">
+                        <div class="card-header tittle">
+                            <h3>
+                                {{tour.name}}
+                            </h3>
+                        </div>
+                        <div class="desc col">
+                            <h3>Descripción</h3>
+                        </div>
+                        <div class="row info">
+                            <div class=" description col-md-8 col-lg-8 col-xs-6">
+                                <p>{{tour.description}}</p>
+                            </div>
+                            <div class="foto col-md-4 col-lg-4 col-xs-6">
+                                <img src="{{tour.image}}" class="img-fluid" alt="Responsive image">
+                            </div>
+                        </div>
+
+                        <div class="card-body contact">
+                            <h3>Información General</h3>
+                            <div class="row col-md-12">
+                                <div>
+                                    <div class="hour">
+                                        <h5>Desde: ${{tour.cost}} por persona </h5>
+
+                                    </div>
+                                    <div class="general">
+
+                                        <div class="input-group">
+                                            <span><i class="far fa-check-circle"></i></span>
+                                            <h6>Cupos disponibles</h6>
+                                        </div>
+                                        <ul>
+                                            <li>{{tour.disponibility}}</li>
+                                        </ul>
+                                        <div class="input-group">
+                                            <span><i class="far fa-clock"></i></span>
+                                            <h6>Duración</h6>
+                                        </div>
+                                        <ul>
+                                            <li>{{tour.duration}}</li>
+                                        </ul>
+
+                                        <div class="input-group">
+                                            <span><i class="far fa-window-close"></i></span>
+                                            <h6>Cancelación fácil</h6>
+                                        </div>
+
+                                        <ul>
+                                            <li>Cancela con hasta 24 horas de antelación y recibe un reembolso completo</li>
+                                        </ul>
+
+                                        <div class="input-group">
+                                            <span><i class="fas fa-check"></i></span>
+                                            <h6>Confirmación inmediata</h6>
+                                        </div>
+
+                                        <div class="input-group">
+                                            <span><i class="fas fa-hand-holding-medical"></i></span>
+                                            <h6>Precauciones contra COVID-19</h6>
+                                        </div>
+
+                                        <p>Se aplican medidas sanitarias y de seguridad especiales:</p>
+                                        <ul>
+                                            <li>Cantidad limitada de pasajeros, para garantizar el distanciamiento</li>
+                                            <li>Personal capacitado en medidas de higiene y seguridad</li>
+                                            <li>Deberás llevar tu propio tapabocas</li>
+                                            <li>Alcohol en gel a disposición</li>
+                                            <li>El personal utiliza el equipo de seguridad requerido</li>
+                                            <li>Uso de tapabocas obligatorio</li>
+                                            <li>Control de temperatura</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <button type="button" class="btn btn-success btn_reserve" routerLink="/reserve/create/{{tour.id}}">Reserva ya</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container">
 
     <div class="col-lg-10" *ngIf="tour">
         <div class="card">
@@ -83,7 +176,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 <app-footer></app-footer>

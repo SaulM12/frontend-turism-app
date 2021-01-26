@@ -1,5 +1,51 @@
 <app-menu></app-menu>
-<div class="container-mt-3" *ngIf="place">
+<div class="container">
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div>
+                        <h2 class="card-header">Datos Destino Turístico</h2>
+                    </div>                   
+
+                    <label class="orangeForm-tittle">Nombre </label>
+                    <div class="input-group form-group">
+                        <input type="text"  id="name" name="name" [(ngModel)]="place.name" class="form-control" placeholder="Ej. Mitad del Mundo" required>
+                    </div>
+
+                    <label class="orangeForm-tittle">Descripción</label>
+                    <div class="input-group form-group">
+                        <textarea id="description" name="description" class="form-control" [(ngModel)]="place.description" placeholder="Descripción" required></textarea>
+                    </div>
+                    <label class="orangeForm-tittle">Ubicación</label>
+                    <div class="input-group form-group">
+                        <input type="text" id="ubication" name="ubication" class="form-control" [(ngModel)]="place.ubication" placeholder="Ej. Quito Norte" required>
+                    </div>
+
+                    <label class="orangeForm-tittle">Imágen Portada</label>
+                    <div class="input-group form-group">
+                        <input type="url" id="cost" name="cost" class="form-control" [(ngModel)]="place.image1"  placeholder="Ej. https://www.foto.png" required>
+                    </div>
+
+                    <label class="orangeForm-tittle">Imágen Carrusel #1</label>
+                    <div class="input-group form-group">
+                        <input type="url" id="duration" name="duration" class="form-control" [(ngModel)]="place.image2" placeholder="Ej. https://www.foto.png" required>
+                    </div>
+
+                    <label class="orangeForm-tittle">Imagen Carrusel #2</label>
+                    <div class="input-group form-group">
+                        <input type="url" id="image" name="image" class="form-control" [(ngModel)]="place.image3" placeholder="Ej. https://foto.jpg" required>
+                    </div>
+
+                    <button class="btn btn-success btn-block" [disabled]="!f.valid">Guardar<i class="fa fa-angle-double-right pl-2"></i></button>
+                    <button class="btn btn-outline-primary btn-block" routerLink="/places">Volver</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container-mt-3" *ngIf="place">
     <div class="row mt-3">
         <div class="col-md-4 mx-auto">
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
@@ -33,5 +79,6 @@
         </div>
     </div>
     
-</div>
+</div> -->
+<app-footer></app-footer>
 

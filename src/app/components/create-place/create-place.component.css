@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.card-header {
+    text-align: center;
+}
+
+.orangeForm-tittle {
+    margin-top: 5px;
+}
+
+label {
+    font-size: medium;
+    font-weight: bold;
+}

@@ -11,22 +11,22 @@
             <h6>Te esperamos!</h6>
         </div>
         <ng-template #loggedOut>
-            <h2>No has iniciado sesión</h2>
+            <h3>Inicia sesión para acceder a nuestros servicios.</h3>
         </ng-template>
-
+        
         <div class="row2">
             <div class="row row-cols-1 row-cols-md-3">
                 <div class="col mb-4">
-                    <div class="card">
-                        <div class="card-header">
+                    <div class="card2">
+                        <div class="card2-header">
                             <h5>Destinos Turísticos</h5>
                         </div>
-                        <img src="https://ec.viajandox.com/uploads/long_description_25.jpg" class="card-img-top"
+                        <img src="https://cdn.pixabay.com/photo/2019/07/25/17/09/camp-4363073_960_720.png" class="card-img-top"
                             alt="..." style="height: 200px">
 
-                        <div class="card-footer">
+                        <div class="card2-footer">
                             <a routerLink="/places">
-                                <td><button class="btn btn-outline-primary">Listado</button></td>
+                                <td><button class="btn btn-primary"><i class="fas fa-list"></i> Listado</button></td>
                             </a>
 
 
@@ -35,36 +35,40 @@
                 </div>
 
                 <div class="col mb-4">
-                    <div class="card">
-                        <div class="card-header">
+                    <div class="card2">
+                        <div class="card2-header">
                             <h5>Tours</h5>
                         </div>
-                        <img src="https://ec.viajandox.com/uploads/long_description_25.jpg" class="card-img-top"
+                        <img src="https://image.freepik.com/vector-gratis/camping-ilustracion-caravana_23-2148670947.jpg" class="card-img-top"
                             alt="..." style="height: 200px">
+                            
 
-
-                        <div class="card-footer">
-                            <a routerLink="/tours">
-                                <td><button class="btn btn-outline-primary">Listado</button></td>
+                        <div class="card2-footer">
+                            <a routerLink="/tour/list">
+                                <td><button class="btn btn-primary"><i class="fas fa-list"></i> Listado</button></td>
                             </a>
 
                         </div>
                     </div>
                 </div>
-
                 <div class="col mb-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5>Promociones</h5>
+                    <div class="card2">
+                        <div class="card2-header">
+                            <h5>Reservas</h5>
                         </div>
-                        <img src="https://ec.viajandox.com/uploads/long_description_25.jpg" class="card-img-top"
+                        <img src="https://us.123rf.com/450wm/feodora52/feodora521901/feodora52190100106/116120838-stock-vector-vector-travel-and-online-booking-concept-with-tourism-icons-depicting-flight-tickets-taxi-baggage-ho.jpg?ver=6
+                        " class="card-img-top"
                             alt="..." style="height: 200px">
+                            
 
-                        <div class="card-footer">
-                            <a routerLink="/places">
-                                <td><button class="btn btn-outline-primary">Listado</button></td>
+                        <div class="card2-footer">
+                            <h5 *ngIf="!isLogged">Realiza tus reservas en linea</h5>
+                            <a *ngIf="isLogged && !isAdmin"  routerLink="/reserve/user/{{nombreUsuario}}">
+                                <td><button class="btn btn-primary"><i class="fas fa-list"></i> Sus Reservas</button></td>
                             </a>
-
+                            <a *ngIf="isLogged && isAdmin"  routerLink="/reserve/list">
+                                <td><button class="btn btn-primary"><i class="fas fa-list"></i> Reservas</button></td>
+                            </a>
                         </div>
                     </div>
                 </div>
