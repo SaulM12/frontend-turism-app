@@ -9,8 +9,8 @@
         </div>
       </div>
       <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card" *ngFor="let place of places">
+        <div class="col" *ngFor="let place of places">
+          <div class="card" >
             <img src="{{place.image1}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{place.name}}</h5>

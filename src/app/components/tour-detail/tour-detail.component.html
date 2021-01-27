@@ -27,9 +27,10 @@
                             <h3>Información General</h3>
                             <div class="row col-md-12">
                                 <div>
+                                    
                                     <div class="hour">
                                         <h5>Desde: ${{tour.cost}} por persona </h5>
-
+                                            
                                     </div>
                                     <div class="general">
 
@@ -37,7 +38,10 @@
                                             <span><i class="far fa-check-circle"></i></span>
                                             <h6>Cupos disponibles</h6>
                                         </div>
-                                        <ul>
+                                        <div *ngIf="disable" class="alert alert-danger" role="alert">
+                                            <i class="fas fa-users-slash"></i> No disponibles 
+                                          </div>
+                                        <ul *ngIf="!disable">
                                             <li>{{tour.disponibility}}</li>
                                         </ul>
                                         <div class="input-group">
@@ -84,7 +88,7 @@
                         </div>
 
                     </div>
-                    <button type="button" class="btn btn-success btn_reserve" routerLink="/reserve/create/{{tour.id}}">Reserva ya</button>
+                    <button *ngIf="!disable" type="button" class="btn btn-success btn_reserve" routerLink="/reserve/create/{{tour.id}}">Reserva ya</button>
                     
                 </div>
             </div>

@@ -59,7 +59,7 @@ export class CreateReserveComponent implements OnInit {
       },
       err =>{
         this.toastr.error(err.error.message,'Fail',{
-          timeOut: 3000, positionClass:'toast-top-center'
+          timeOut: 3000, positionClass:'toast-top-center', 
         });
        
       }
@@ -79,7 +79,7 @@ export class CreateReserveComponent implements OnInit {
         });
           this.router.navigate(['/reserve/user/'+ this.nombreUsuario]);
       },err =>{
-        this.toastr.error(err.error.message,'Fail',{
+        this.toastr.error(err.error.message,'Error',{
           timeOut: 3000, positionClass:'toast-top-center'
         });
   

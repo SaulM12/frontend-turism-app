@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { TokenService } from 'src/app/service/token.service';
 import { Tour } from '../../models/tour'
@@ -19,10 +19,11 @@ export class TourListPlaceComponent implements OnInit {
   constructor(private tourService: TourService,
     private toastr: ToastrService,
     private tokenService: TokenService,
-    private activatedRoute: ActivatedRoute) { }
+    private activatedRoute: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
-    this.loadPlaces();
+    this.loadPlaces()
     this.roles = this.tokenService.getAuthorities();
     this.roles.forEach(rol => {
       if (rol === 'ROLE_ADMIN') {
@@ -39,6 +40,10 @@ export class TourListPlaceComponent implements OnInit {
       },
       err => {
         console.log(err);
+        this.router.navigate(['/']);
+        this.toastr.error(err.error.message,'Fail',{
+          timeOut: 3000, positionClass:'toast-top-center'
+        });
       }
     )
   }

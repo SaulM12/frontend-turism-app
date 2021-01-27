@@ -15,7 +15,8 @@ export class ReserveListUserComponent implements OnInit {
   reserves: Reserve[] = [];
   roles: string[];
   isAdmin = false;
-
+  nombreUsuario = '';
+  isLogged = false;
   constructor(private reserveService: ReserveService,
     private toastr: ToastrService,
     private tokenService: TokenService,
@@ -29,7 +30,15 @@ export class ReserveListUserComponent implements OnInit {
         this.isAdmin = true;
       }
     })
+    if (this.tokenService.getToken()) {
+      this.isLogged = true
+      this.nombreUsuario = this.tokenService.getUserName();
+    } else {
+      this.isLogged = false
+      this.nombreUsuario = '';
+    }
   }
+  
 
   loadReserves(): void {
     const id = this.activatedRoute.snapshot.params.id;

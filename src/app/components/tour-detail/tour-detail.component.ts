@@ -17,6 +17,8 @@ export class TourDetailComponent implements OnInit {
   roles: string[];
   place: string[];
   tour: Tour = null;
+  disable = true;
+
 
   constructor(private tourService: TourService,
     private activatedRoute: ActivatedRoute,
@@ -25,22 +27,28 @@ export class TourDetailComponent implements OnInit {
     private tokenService: TokenService) { }
 
   ngOnInit(): void{
+    this.getTour()
     this.roles = this.tokenService.getAuthorities();
     this.roles.forEach(rol => {
       if (rol === 'ROLE_ADMIN') {
         this.isAdmin = true;
       }
     })
+  }
+
+  getTour(): void{
     const id = this.activatedRoute.snapshot.params.id;
     this.tourService.detail(id).subscribe(
-      data =>{
+      data => {
         this.tour=data;
+        if(data.disponibility > 0){
+          this.disable = false;
+      }
       },
-      err =>{
+      err => {
         this.toastr.error(err.error.message,'Fail',{
           timeOut: 3000, positionClass:'toast-top-center'
         });
-       
       }
     )
   }

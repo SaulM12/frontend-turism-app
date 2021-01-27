@@ -35,12 +35,12 @@ export class CreatePlaceComponent implements OnInit {
         this.toastr.success('Place creado','OK',{
           timeOut: 3000, positionClass:'toast-top-center'
         });
-          this.router.navigate(['/']);
+          this.router.navigate(['/places']);
       },err =>{
         this.toastr.error(err.error.message,'Fail',{
           timeOut: 3000, positionClass:'toast-top-center'
         });
-          this.router.navigate(['/places']);
+          
 
       }
     )
